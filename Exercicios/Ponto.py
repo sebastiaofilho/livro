@@ -3,16 +3,16 @@ class Ponto:
         self.x = x
         self.y = y
 
-    def imprimir(self, x, y):
-        print(f"{x}, {y}")
+    def imprimirPonto(self):
+        print(f"{self.x}, {self.y}")
 
 
 class Retangulo:
-    from Ponto import Ponto
 
-    def __init__(self, largura, altura):
+    def __init__(self, largura, altura, x, y):
         self.largura = largura
         self.altura = altura
+        self.vertice = Ponto(x, y)
 
     def encontrarCentro(self):
         centroA = self.altura/2
@@ -23,6 +23,10 @@ class Retangulo:
         area = self.altura*self.largura
         print(f'A área do retângulo é {area}.')
 
+    def imprimirRetangulo(self):
+        print(f'{self.altura} e {self.largura} e {self.vertice.imprimirPonto()}')
 
-teste = Retangulo(10, 2)
-teste.encontrarCentro()
+#
+
+#teste = Retangulo(10, 2)
+#teste.encontrarCentro()

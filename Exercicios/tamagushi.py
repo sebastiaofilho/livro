@@ -7,19 +7,23 @@ class Tamagushi:
 
     def Nome(self, nome):
         self.nome = nome
+        return nome
+
+    def Fome(self, comida):
+        self.fome -= comida
+        return self.fome
+
+    def Saude(self, pontos):
+        self.saude += pontos
+        return self.saude
+
+    def Idade(self, ano):
+        self.idade += ano
+        return self.idade
 
     def Humor(self):
         Humor = 50 + self.saude - self.fome
         return Humor
-
-    def Saude(self, pontos):
-        self.saude += pontos
-
-    def Idade(self, ano):
-        self.idade += ano
-
-    def Fome(self, comida):
-        self.fome -= comida
 
 
 tama = Tamagushi("Tata", 50, 100, 5)
